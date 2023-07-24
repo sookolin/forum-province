@@ -18,7 +18,37 @@
 		</style>
 	</head>
 	<body style="overflow-wrap: break-word; word-break: break-all;">
-   		 <div>
+   		<p style="text-align: center;">
+	<img alt="fibzxFf.png" data-loaded="true" data-src="https://i.imgur.com/fibzxFf.png" src="https://forum.gtaprovince.ru/applications/core/interface/js/spacer.png" style="height: auto; width: max; border-radius: 8px;">
+</p>
+<link href="https://5s.prov.site/admin/src/css/forum/styleforum.css?v2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<link href="https://5s.prov.site/admin/src/css/forum/spoilersokolin.css?v12" rel="stylesheet">
+<link href="https://5s.prov.site/admin/src/css/forum/rulesstyle.css?v2" rel="stylesheet">
+<script src="https://5s.prov.site/admin/src/js/jquery-3.4.1.min.js"></script>
+<style type="text/css" wfd-invisible="true">
+.snow {
+	background-image: unset!important;
+}
+
+.sokolin_spoiler_body {
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+.sokolin_spoiler_content {
+    color: #999999;
+}
+.new-item {
+    background-color: #7f8c8d;
+    border-radius: 5px;
+    padding: 1px 2px;
+}</style>
+<p>
+	&nbsp;
+</p>
+
+<div>
 	<span class="subtitle">Быстрое перемещение</span>
 
 	<p>
@@ -3003,5 +3033,15 @@
 <p style="text-align: right;">
 	<span class="n-item">Последнее редактирование</span><span class="item"> &ndash; 22.11.2022</span>
 </p>
+<script>
+$(".sokolin_spoiler_content").hide();
+$(function() {
+	$(".sokolin_spoiler_title").click(function() {
+		$(this).toggleClass("sokolin_spoiler");
+		let a = $(this).next(".sokolin_spoiler_content").slideToggle(500);
+		a.toggleClass("active");
+  	});
+});
+</script>
 	</body>
 </html>
