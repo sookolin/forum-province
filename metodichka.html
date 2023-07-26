@@ -1,475 +1,566 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-		<style>
-			::-webkit-scrollbar {
-				width: 6px;
-				border-radius: 3px;
-			}
-			::-webkit-scrollbar-thumb {
-				background-color: #e17724;
-				border-radius: 3px;
-			}
-			::-webkit-scrollbar-track {
-				-webkit-box-shadow: 0 0 6px rgba(0,0,0,.3);
-				border-radius: 3px;
-			}
-			body {
-				font-family: Montserrat,Helvetica,sans-serif;
-			}
-			a {
-				color: #8ba7bf!important;
-				text-decoration: none!important;
-				transition: all .7s;
-			}
-			a:hover {
-				color: white;
-			}
-		</style>
-	</head>
-	<body style="overflow-wrap: break-word; word-break: break-all;">
-   		<p style="text-align: center;">
-	<img alt="fibzxFf.png" data-loaded="true" data-src="https://i.imgur.com/fibzxFf.png" src="https://forum.gtaprovince.ru/applications/core/interface/js/spacer.png" style="height: auto; width: max; border-radius: 8px;">
-</p>
-<link href="https://5s.prov.site/admin/src/css/forum/styleforum.css?v2" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-<link href="https://5s.prov.site/admin/src/css/forum/spoilersokolin.css?v12" rel="stylesheet">
-<link href="https://5s.prov.site/admin/src/css/forum/rulesstyle.css?v2" rel="stylesheet">
-<script src="https://5s.prov.site/admin/src/js/jquery-3.4.1.min.js"></script>
-<style type="text/css" wfd-invisible="true">
-.snow {
-	background-image: unset!important;
-}
 
-.sokolin_spoiler_body {
-	margin-top: 2px;
-	margin-bottom: 5px;
-}
-.sokolin_spoiler_content {
-    color: #999999;
-}
-.new-item {
-    background-color: #7f8c8d;
-    border-radius: 5px;
-    padding: 1px 2px;
-}
-tr th {
-    text-transform: uppercase!important;
-    font-size: 15px!important;
-    color: #565674;
-}
-.table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-table {
-    font-size: 16px;
-    vertical-align: middle!important;
-    border-collapse: collapse;
-}
-table thead {
-    vertical-align: bottom;
-}
-.table tr {
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-    border-bottom-color: #2b2b40;
-}
-.table tr:last-child {
-    border-bottom-width: 0px;
-}
-.table td, .table th {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<style>
+		::-webkit-scrollbar {
+			width: 6px;
+			border-radius: 3px;
+		}
 
-.table td:first-child, .table th:first-child, .table tr:first-child {
-    padding-left: 0;
-}
-table td {
-    color: #92929f;
-}
-table th {
-    border-bottom-color: inherit;
-    border-bottom-style: dashed;
-    border-bottom-width: 1px;
-}
-.table-responsive {
-    overflow-x: auto;
-}
-.card .card-body {
-    padding: 0 1.25rem;
-}
-.card {
-    position: center;
-    min-width: 0;
-    background-color: #1e1e2d;
-    background-clip: border-box;
-    border: 1px solid #2b2b40;
-    border-radius: 0.625rem;
-    box-shadow: none;
-    width: 100%;
-    margin-top: 2px;
-    margin-bottom: 5px;
-text-align: center;
-}
-.table {
-    width:100%;
-    max-width:100%;
-    background-color:transparent
-}
-.table-responsive a {
-	text-decoration: none!important;
-	color: #2058ff;
-	font-style: oblique;
-}</style>
-<p style="text-align: center;">
-	<span style="color:#d9c29e;"><span style="font-size:48px;"><strong>ОБЩАЯ ИНФОРМАЦИЯ</strong></span></span>
-</p>
-<hr>
-<p>
-	&nbsp;
-</p>
+		::-webkit-scrollbar-thumb {
+			background-color: #e17724;
+			border-radius: 3px;
+		}
 
-<div>
-	<span class="subtitle">Быстрое перемещение</span>
+		::-webkit-scrollbar-track {
+			-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+			border-radius: 3px;
+		}
+
+		body {
+			font-family: Montserrat, Helvetica, sans-serif;
+			/* background-color: #17191f; */
+    		line-height: 1.6;
+		}
+	</style>
+</head>
+
+<body style="overflow-wrap: break-word; word-break: break-all;">
+	<p style="text-align: center;">
+		<img alt="fibzxFf.png" data-loaded="true" data-src="https://i.imgur.com/fibzxFf.png"
+			src="https://forum.gtaprovince.ru/applications/core/interface/js/spacer.png"
+			style="height: auto; width: max; border-radius: 8px;">
+	</p>
+	<link href="https://5s.prov.site/admin/src/css/forum/styleforum.css?v2" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+	<link href="https://5s.prov.site/admin/src/css/forum/spoilersokolin.css?v12" rel="stylesheet">
+	<link href="https://5s.prov.site/admin/src/css/forum/rulesstyle.css?v2" rel="stylesheet">
+	<script src="https://5s.prov.site/admin/src/js/jquery-3.4.1.min.js"></script>
+	<style type="text/css" wfd-invisible="true">
+		.snow {
+			background-image: unset !important;
+		}
+
+		.sokolin_spoiler_body {
+			margin-top: 2px;
+			margin-bottom: 5px;
+		}
+
+		.sokolin_spoiler_content {
+			color: #999999;
+		}
+
+		.new-item {
+			background-color: #7f8c8d;
+			border-radius: 5px;
+			padding: 1px 2px;
+		}
+
+		tr th {
+			text-transform: uppercase !important;
+			font-size: 15px !important;
+			color: #565674;
+		}
+
+		.table-responsive {
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		table {
+			font-size: 16px;
+			vertical-align: middle !important;
+			border-collapse: collapse;
+		}
+
+		table thead {
+			vertical-align: bottom;
+		}
+
+		.table tr {
+			border-bottom-width: 1px;
+			border-bottom-style: dashed;
+			border-bottom-color: #2b2b40;
+		}
+
+		.table tr:last-child {
+			border-bottom-width: 0px;
+		}
+
+		.table td,
+		.table th {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		.table td:first-child,
+		.table th:first-child,
+		.table tr:first-child {
+			padding-left: 0;
+		}
+
+		table td {
+			color: #92929f;
+		}
+
+		table th {
+			border-bottom-color: inherit;
+			border-bottom-style: dashed;
+			border-bottom-width: 1px;
+		}
+
+		.table-responsive {
+			overflow-x: auto;
+		}
+
+		.card .card-body {
+			padding: 0 1.25rem;
+		}
+
+		.card {
+			position: center;
+			min-width: 0;
+			background-color: #1e1e2d;
+			background-clip: border-box;
+			border: 1px solid #2b2b40;
+			border-radius: 0.625rem;
+			box-shadow: none;
+			width: 100%;
+			margin-top: 2px;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+
+		.table {
+			width: 100%;
+			max-width: 100%;
+			background-color: transparent
+		}
+
+		.table-responsive a {
+			text-decoration: none !important;
+			color: #2058ff;
+			font-style: oblique;
+		}
+
+		a {
+			color: #8ba7bf !important;
+			text-decoration: none !important;
+			transition: all .7s;
+		}
+
+		a:hover {
+			color: white;
+		}
+		.nav-forum .l-item {
+			transition: color .3s;
+			color: #d9d9d9;
+			font-size: 16px;
+		}
+		.nav-forum .l-item:hover {
+			color: #8ba7bf;
+		}
+		ul {
+			color: white;
+		}
+	</style>
+	<p style="text-align: center;">
+		<span style="color:#d9c29e;"><span style="font-size:48px;"><strong>ОБЩАЯ ИНФОРМАЦИЯ</strong></span></span>
+	</p>
+	<hr>
+	<p>
+		&nbsp;
+	</p>
+
+	<div>
+		<span class="subtitle">Быстрое перемещение</span>
+
+		<p>
+			<a href="#1" style="text-decoration: none;"><span class="n-item">1 &ndash; </span><span
+					class="item l-item">Полезные ссылки</span></a><br>
+			<a href="#2" style="text-decoration: none;"><span class="n-item">2 &ndash; </span><span
+					class="item l-item">Режим работы фракций</span></a><br>
+			<a href="#3" style="text-decoration: none;"><span class="n-item">3 &ndash; </span><span
+					class="item l-item">Общие системные команды</span></a>
+		</p>
+	</div>
 
 	<p>
-		<a href="#1" rel="" style="text-decoration: none;"><span class="n-item">1 &ndash; </span><span class="item l-item">Полезные ссылки</span></a><br>
-		<a href="#2" rel="" style="text-decoration: none;"><span class="n-item">2 &ndash; </span><span class="item l-item">Режим работы фракций</span></a><br>
-		<a href="#3" rel="" style="text-decoration: none;"><span class="n-item">3 &ndash; </span><span class="item l-item">Общие системные команды</span></a>
+		&nbsp;
 	</p>
-</div>
 
-<p>
-	&nbsp;
-</p>
+	<hr>
+	<p>
+		&nbsp;
+	</p>
 
-<hr>
-<p>
-	&nbsp;
-</p>
+	<p>
+		<span class="subtitle" id="1">1 – Полезные ссылки</span>
+	</p>
 
-<p>
-	<span class="subtitle" id="1">1 - Полезные ссылки</span>
-</p>
+	<p>
+		<div class="nav-forum">
+			<ul>
+				<li>
+					<a href="https://forum.gtaprovince.ru/topic/80855-server-5-pravila-dlya-sotrudnikov-frakciy/" style="text-decoration: none;">
+						<span class="item l-item">Правила для сотрудников фракций (ПдСФ)</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– основной документ, который должен соблюдать каждый сотрудник фракций.</span><br>
+				</li>
+				
+				<li>
+					<a href="https://forum.gtaprovince.ru/topic/80854-server-5-pravila-dlya-liderov-frakciy/" style="text-decoration: none;">
+						<span class="item l-item">Правила для лидеров фракций (ПдЛФ)</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– основной документ, который должен соблюдать каждый лидер фракций.</span><br>
+				</li>
+					
+				<li>
+					<a href="https://forum.gtaprovince.ru/forum/413-zhaloby-na-sotrudnikovliderov-gosudarstvennyh-organizaciy/" style="text-decoration: none;">
+						<span class="item l-item">Жалобы на сотрудников/лидеров государственных организаций</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– раздел форума, в который любой игрок может подать жалобу на сотрудника и лидера фракции.</span><br>
+				</li>
+					
+				<li>
+					<a href="https://forum.gtaprovince.ru/topic/685412-predlozheniya-po-uluchsheniyu-servera/" style="text-decoration: none;">
+						<span class="item l-item">Предложения по улучшению сервера</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– раздел форума, в который любой игрок может подать предложение по улучшению фракций или вовсе сервера.</span><br>
+				</li>
+					
+				<li>
+					<a href="https://vk.com/frac5" style="text-decoration: none;">
+						<span class="item l-item">Новости фракций | MTA Province | Server #5</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– сообщество в VK, где публикуются посты о проведении различных мероприятий или о предстоящих наборах.</span><br>
+				</li>
+					
+				<li>
+					<a href="https://5s.prov.site/frac/table" style="text-decoration: none;">
+						<span class="item l-item">База данных фракций</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– место, где находится вся актуальная информация о сотрудниках и статистика фракций.</span><br>
+				</li>
+					
+				<li>
+					<a href="https://5s.prov.site/frac/table/fbl" style="text-decoration: none;">
+						<span class="item l-item">Внутренний чёрный список (ВЧС)</span>
+					</a>
+					<span style="color: rgb(139, 167, 191);">– список недобросовестных сотрудников, которые нарушили пункты устава своей фракции.</span>
+				</li>
+			</ul>
+		</div>
+	</p>
 
-<p>
-	<dev> <span style="font-size:16px;"><a href="https://forum.gtaprovince.ru/topic/80855-server-5-pravila-dlya-sotrudnikov-frakciy/" rel="" style="text-decoration: none;">Правила для сотрудников фракций (ПдСФ)</a> <span style="color: rgb(139, 167, 191);">- основной документ, который должен соблюдать каждый сотрудник фракций.</span></span><br>
-	<span style="font-size:16px;"><a href="https://forum.gtaprovince.ru/topic/80854-server-5-pravila-dlya-liderov-frakciy/" rel="" style="text-decoration: none;">Правила для лидеров фракций (ПдЛФ)</a> <span style="color: rgb(139, 167, 191);">- основной документ, который должен соблюдать каждый лидер фракций.</span></span><br>
-	<span style="font-size:16px;"><a href="https://forum.gtaprovince.ru/forum/413-zhaloby-na-sotrudnikovliderov-gosudarstvennyh-organizaciy/" rel="" style="text-decoration: none;">Жалобы на сотрудников/лидеров государственных организаций</a> <span style="color: rgb(139, 167, 191);">- раздел форума, в который любой игрок может подать жалобу на сотрудника и лидера фракции.</span></span><br>
-	<span style="font-size:16px;"><a href="https://forum.gtaprovince.ru/topic/685412-predlozheniya-po-uluchsheniyu-servera/" rel="" style="text-decoration: none;">Предложения по улучшению сервера</a> <span style="color: rgb(139, 167, 191);">- раздел форума, в который любой игрок может подать предложение по улучшению фракций или вовсе сервера.</span></span><br>
-	<span style="font-size:16px;"><a href="https://vk.com/frac5" rel="external nofollow" style="text-decoration: none;">Новости фракций | MTA Province | Server #5</a> <span style="color: rgb(139, 167, 191);">- сообщество в VK, где публикуются посты о проведении различных мероприятий или о предстоящих наборах.</span></span><br>
-	<span style="font-size:16px;"><a href="https://5s.prov.site/frac/table" rel="external nofollow" style="text-decoration: none;">База данных фракций</a> <span style="color: rgb(139, 167, 191);">- место, где находится вся актуальная информация о сотрудниках и статистика фракций.</span></span><br>
-	<span style="font-size:16px;"><a href="https://5s.prov.site/frac/table/fbl" rel="external nofollow" style="text-decoration: none;">Внутренний чёрный список (ВЧС)</a> <span style="color: rgb(139, 167, 191);">- список недобросовестных сотрудников, которые нарушили пункты устава своей фракции.</span></span></dev>
-</p>
+	<p>
+		&nbsp;
+	</p>
 
-<p>
-	&nbsp;
-</p>
+	<hr>
+	<p>
+		&nbsp;
+	</p>
 
-<hr>
-<p>
-	&nbsp;
-</p>
+	<p>
+		<span class="subtitle" id="2">2 – Режим работы фракций</span>
+	</p>
 
-<p>
-	<span class="subtitle" id="2">2 - Режим работы фракций</span>
-</p>
-
-<div class="card">
-	<div class="card-body">
-		<div class="table-responsive">
-			<table border="0" class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-				<thead>
-					<tr class="fs-8 fw-bolder text-gray-800">
-						<th class="pb-3 text-center">
-							<span class="badge badge-danger">День недели</span>
-						</th>
-						<th class="pb-3 text-center">
-							<span class="badge badge-danger">Рабочее время</span>
-						</th>
-						<th class="pb-3 text-center">
-							<span class="badge badge-danger">Обеденный перерыв</span>
-						</th>
-					</tr>
-				</thead>
-				<tbody class="fs-8" id="infoJBKtwo">
-					<tr>
-						<td>
-							<span>Понедельник</span>
-						</td>
-						<td>
-							<span>11:00 - 20:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Вторник</span>
-						</td>
-						<td>
-							<span>11:00 - 20:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Среда</span>
-						</td>
-						<td>
-							<span>11:00 - 20:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Четверг</span>
-						</td>
-						<td>
-							<span>11:00 - 20:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Пятница</span>
-						</td>
-						<td>
-							<span>11:00 - 20:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Суббота</span>
-						</td>
-						<td>
-							<span>11:00 - 19:00</span>
-						</td>
-						<td>
-							<span>15:00 - 16:00</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Воскресенье</span>
-						</td>
-						<td>
-							<span>Выходной</span>
-						</td>
-						<td>
-							<span>-</span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+	<div class="card">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
+					<thead>
+						<tr class="fs-8 fw-bolder text-gray-800">
+							<th class="pb-3 text-center">
+								<span class="badge badge-danger">День недели</span>
+							</th>
+							<th class="pb-3 text-center">
+								<span class="badge badge-danger">Рабочее время</span>
+							</th>
+							<th class="pb-3 text-center">
+								<span class="badge badge-danger">Обеденный перерыв</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="fs-8" id="infoJBKtwo">
+						<tr>
+							<td>
+								<span>Понедельник</span>
+							</td>
+							<td>
+								<span>11:00 - 20:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Вторник</span>
+							</td>
+							<td>
+								<span>11:00 - 20:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Среда</span>
+							</td>
+							<td>
+								<span>11:00 - 20:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Четверг</span>
+							</td>
+							<td>
+								<span>11:00 - 20:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Пятница</span>
+							</td>
+							<td>
+								<span>11:00 - 20:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Суббота</span>
+							</td>
+							<td>
+								<span>11:00 - 19:00</span>
+							</td>
+							<td>
+								<span>15:00 - 16:00</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>Воскресенье</span>
+							</td>
+							<td>
+								<span>Выходной</span>
+							</td>
+							<td>
+								<span>-</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
-</div>
 
-<p>
-	&nbsp;
-</p>
-
-<hr>
-<p>
-	&nbsp;
-</p>
-
-<p>
-	<span class="subtitle" id="3">3 - Общие системные команды</span>
-</p>
-
-<div class="card">
-	<div class="table-responsive">
+	<p>
 		&nbsp;
+	</p>
+
+	<hr>
+	<p>
+		&nbsp;
+	</p>
+
+	<p>
+		<span class="subtitle" id="3">3 – Общие системные команды</span>
+	</p>
+
+	<div class="card">
+		<div class="table-responsive">
+			&nbsp;
+		</div>
+
+		<table class="card-body">
+		</table>
+
+		<table border="0" class="table table-row-dashed align-middle gs-0 gy-3 my-0">
+			<thead>
+				<tr class="fs-8 fw-bolder text-gray-800">
+					<th class="pb-3 text-center">
+						<span class="badge badge-danger">Команда</span>
+					</th>
+					<th class="pb-3 text-center" style="text-align: left;">
+						<span class="badge badge-danger">Назначение</span>
+					</th>
+					<th class="pb-3 text-center">
+						<span class="badge badge-danger">Доступ</span>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						/r [Текст]
+					</td>
+					<td style="text-align: left;">
+						RP чат рации внутри фракции
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/rb [Текст]
+					</td>
+					<td style="text-align: left;">
+						NonRP чат рации внутри фракции
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/ro [Текст]
+					</td>
+					<td style="text-align: left;">
+						Общий RP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/rob [Текст]
+					</td>
+					<td style="text-align: left;">
+						Общий NonRP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/d [Текст]
+					</td>
+					<td style="text-align: left;">
+						Рация между всеми фракциями
+					</td>
+					<td>
+						7+ (РЖД: 5+)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/db [Текст]
+					</td>
+					<td style="text-align: left;">
+						NonRP рация между всеми фракциями
+					</td>
+					<td>
+						7+ (РЖД: 5+)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/find
+					</td>
+					<td style="text-align: left;">
+						Список игроков во фракции онлайн
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/paytime
+					</td>
+					<td style="text-align: left;">
+						Время до начисления зарплаты
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/fracvoice [0/1/2]
+					</td>
+					<td style="text-align: left;">
+						Выключить / Включить фракционную голосовую рацию / Режим прослушивание
+					</td>
+					<td>
+						1+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/gov
+					</td>
+					<td style="text-align: left;">
+						Написать государственные новости
+					</td>
+					<td>
+						Лидер и его заместитель
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/invite [ID]
+					</td>
+					<td style="text-align: left;">
+						Принять во фракцию
+					</td>
+					<td>
+						Лидер и его заместитель
+					</td>
+				</tr>
+				<tr>
+					<td>
+						/uninvite [ID]
+					</td>
+					<td style="text-align: left;">
+						Уволить из фракции
+					</td>
+					<td>
+						Лидер и его заместитель
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Клавиша <kbd class="keyAPP">Ю</kbd>
+					</td>
+					<td style="text-align: left;">
+						Список всех игроков фракции
+					</td>
+					<td>
+						Лидер и 2 ранга ниже
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
-	<table class="card-body">
-	</table>
+	<p>
+		&nbsp;
+	</p>
 
-	<table border="0" class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-		<thead>
-			<tr class="fs-8 fw-bolder text-gray-800">
-				<th class="pb-3 text-center">
-					<span class="badge badge-danger">Команда</span>
-				</th>
-				<th class="pb-3 text-center" style="text-align: left;">
-					<span class="badge badge-danger">Назначение</span>
-				</th>
-				<th class="pb-3 text-center">
-					<span class="badge badge-danger">Доступ</span>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					/r [Текст]
-				</td>
-				<td style="text-align: left;">
-					RP чат рации внутри фракции
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/rb [Текст]
-				</td>
-				<td style="text-align: left;">
-					NonRP чат рации внутри фракции
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/ro [Текст]
-				</td>
-				<td style="text-align: left;">
-					Общий RP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/rob [Текст]
-				</td>
-				<td style="text-align: left;">
-					Общий NonRP чат сотрудников ЦГБ или ГУВД и ГИБДД всех городов
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/d [Текст]
-				</td>
-				<td style="text-align: left;">
-					Рация между всеми фракциями
-				</td>
-				<td>
-					7+ (РЖД: 5+)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/db [Текст]
-				</td>
-				<td style="text-align: left;">
-					NonRP рация между всеми фракциями
-				</td>
-				<td>
-					7+ (РЖД: 5+)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/find
-				</td>
-				<td style="text-align: left;">
-					Список игроков во фракции онлайн
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/paytime
-				</td>
-				<td style="text-align: left;">
-					Время до начисления зарплаты
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/fracvoice [0/1/2]
-				</td>
-				<td style="text-align: left;">
-					Выключить / Включить фракционную голосовую рацию / Режим прослушивание
-				</td>
-				<td>
-					1+
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/gov
-				</td>
-				<td style="text-align: left;">
-					Написать государственные новости
-				</td>
-				<td>
-					Лидер и его заместитель
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/invite [ID]
-				</td>
-				<td style="text-align: left;">
-					Принять во фракцию
-				</td>
-				<td>
-					Лидер и его заместитель
-				</td>
-			</tr>
-			<tr>
-				<td>
-					/uninvite [ID]
-				</td>
-				<td style="text-align: left;">
-					Уволить из фракции
-				</td>
-				<td>
-					Лидер и его заместитель
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Клавиша <kbd class="keyAPP">Ю</kbd>
-				</td>
-				<td style="text-align: left;">
-					Список всех игроков фракции
-				</td>
-				<td>
-					Лидер и 2 ранга ниже
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-
-<p>
-	&nbsp;
-</p>
-
-<hr>
-<p>
-	&nbsp;
-</p>
+	<hr>
+	<p>
+		&nbsp;
+	</p>
 
 </html>
