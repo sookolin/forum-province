@@ -1,0 +1,170 @@
+
+/* Smooth swap for partial updates */
+.is-swapping {
+  transition: min-height .24s ease;
+}
+
+/* --- UI utility: pill rounding --- */
+.pill { 
+  border-radius: 9999px !important; 
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.pill-md { 
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.input-group .form-select.pill,
+.input-group .form-control.pill { 
+  border-top-right-radius: 9999px !important; 
+  border-bottom-right-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.input-group .form-select.pill-md,
+.input-group .form-control.pill-md { 
+  border-top-right-radius: 14px !important; 
+  border-bottom-right-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .input-group-text:first-child { 
+  border-top-left-radius: 14px !important; 
+  border-bottom-left-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep icons stable inside input-group when switching visibility */
+.input-group .input-group-text { 
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 40px;
+}
+.input-group.with-prefix .input-group-text:first-child { 
+  border-right: 0 !important; 
+}
+.input-group.with-suffix .input-group-text:last-child { 
+  border-left: 0 !important; 
+}
+.input-group .form-control, 
+.input-group .form-select { 
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: rgba(255, 255, 255, 0.08); 
+}
+.input-group .form-select.pill:focus,
+.input-group .form-control.pill:focus,
+.input-group .form-select.pill-md:focus,
+.input-group .form-control.pill-md:focus { 
+  box-shadow: 0 0 0 .12rem rgba(174,62,201,.25); 
+  border-color: var(--primary-color); 
+}
+
+/* ===== Soft Select (унифицированный аккуратный стиль) ===== */
+.soft-select { 
+  position: relative; 
+  display: block; 
+}
+.soft-select .soft-select-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  line-height: 1.25;
+  outline: none;
+  transition: background-color .2s ease, box-shadow .2s ease;
+}
+.soft-select .soft-select-toggle:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 .12rem rgba(174,62,201,.28);
+}
+.soft-select.open .soft-select-toggle {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 .12rem rgba(174,62,201,.22);
+}
+.soft-select .soft-select-menu {
+  display: none;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.28);
+  padding: 6px;
+  max-height: 48vh;
+  overflow: auto;
+}
+
+/* ===== Button Style ===== */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #e6e9ef !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.02);
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .02s ease;
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.07) !important;
+  border-color: rgba(255,255,255,0.14) !important;
+}
+.btn-glass.btn-primary {
+  background: rgba(174,62,201,.18) !important;
+  border-color: rgba(174,62,201,.6) !important;
+}
+.btn-glass.btn-primary:hover { 
+  background: rgba(174,62,201,.26) !important; 
+}
+
+/* ===== Header Styles ===== */
+.main-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border: 1px solid var(--border-color); 
+  border-radius: 14px; 
+  padding: 10px 16px; 
+  margin-bottom: 16px;
+  position: sticky;
+  top: 8px; 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== Form Control and Inputs ===== */
+.form-group input[type='text'],
+.form-group input[type='url'],
+.form-group input[type='password'],
+.form-group input[type='number'],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--ui-radius);
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(174, 62, 201, 0.25);
+}
